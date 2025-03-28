@@ -1,0 +1,19 @@
+{
+  "name": "gdunit4.nvim",
+  "version": "0.1.0",
+  "description": "GdUnit4 integration for Neovim",
+  "scripts": {
+    "test": "nvim -l ./tests/busted.lua tests/",
+    "test:watch": "find lua tests -name '*.lua' | entr -c nvim -l ./tests/busted.lua tests/",
+    "test:coverage": "nvim -l ./tests/busted.lua --coverage tests/",
+    "clean": "rm -rf .tests"
+  },
+  "keywords": [
+    "neovim",
+    "godot",
+    "gdunit4",
+    "testing"
+  ],
+  "author": "",
+  "license": "MIT"
+}
