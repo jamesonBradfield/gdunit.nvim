@@ -23,12 +23,12 @@ A Neovim plugin for integrating GdUnit4 (Godot testing framework) with Neovim. R
 
 ```lua
 {
-  "yourusername/gdunit4.nvim",
+  "jamesonBradfield/gdunit4.nvim",
   dependencies = {
     "nvim-lua/plenary.nvim",
     "nvim-treesitter/nvim-treesitter",
     -- Optional for enhanced UI
-    "yourusername/snacks.nvim",
+    "folke/snacks.nvim",
   },
   config = function()
     require("gdunit4").setup({
