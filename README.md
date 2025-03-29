@@ -1,6 +1,7 @@
 # gdunit4.nvim
 
 A Neovim plugin for integrating GdUnit4 (Godot testing framework) with Neovim. Run, debug, and generate tests for your Godot projects without leaving your editor!
+# WARNING (this is only tested on my machine arch linux and nvim v0.10.4)
 
 ## Features
 
