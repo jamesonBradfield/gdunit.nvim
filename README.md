@@ -40,6 +40,48 @@ A Neovim plugin for integrating GdUnit4 (Godot testing framework) with Neovim. R
 Using packer.nvim
 lua
 ```
+# Configuration
+
+The plugin comes with sensible defaults, but you can customize it with the following options:
+
+## Basic Setup
+
+```lua
+require("gdunit4").setup({
+  -- Your configuration options here
+})
+```
+
+## Available Options
+
+| Option | Type | Default | Description |
+|--------|------|---------|-------------|
+| `godot_bin` | string | `os.getenv("GODOT_BIN")` or `"godot-mono"` | Path to Godot executable. Will use the GODOT_BIN environment variable if available. |
+| `runner_script` | string | `"addons/gdunit4/runtest.sh"` (Unix) or `"addons/gdunit4/runtest.cmd"` (Windows) | Path to the GdUnit4 test runner script relative to project root. |
+| `report_directory` | string | `"reports"` | Directory where test reports will be saved. |
+| `report_count` | number | `20` | Number of report folders to keep. Set to 0 to keep all reports. |
+| `continue_on_failure` | boolean | `false` | Whether to continue running tests after a failure. |
+| `test_config_file` | string | `"GdUnitRunner.cfg"` | Default configuration file for running tests. |
+| `ignored_tests` | table | `{}` | List of tests to ignore when running. |
+| `debug_mode` | boolean | `true` | Enable detailed logging for debugging. |
+| `path_separator` | string | `"/"` (Unix) or `"\\"` (Windows) | Path separator for file paths. Usually auto-detected. |
+| `window_position` | string | `"bottom_right"` | Position for test result windows when using snacks.nvim. Options: `"top"`, `"right"`, `"bottom"`, `"left"`, `"center"`, `"float"`, `"bottom_right"`, etc. |
+| `use_snacks` | boolean | `true` | Whether to use snacks.nvim for displaying test results (if available). |
+
+## Example Configuration
+
+```lua
+require("gdunit4").setup({
+  godot_bin = "/usr/local/bin/godot4",
+  report_directory = "test-reports",
+  report_count = 10,
+  debug_mode = false,
+  window_position = "bottom",
+  use_snacks = true
+})
+```
+
+You can change these options at any time using the `:GdUnit show_config` command.
 
 ## Usage
 ### Commands
