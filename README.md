@@ -37,7 +37,7 @@ A Neovim plugin for integrating GdUnit4 (Godot testing framework) with Neovim. R
     })
   end,
 }
-
+```
 ## Basic Setup
 
 ```lua
