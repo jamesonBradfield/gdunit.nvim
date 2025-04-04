@@ -37,12 +37,6 @@ A Neovim plugin for integrating GdUnit4 (Godot testing framework) with Neovim. R
     })
   end,
 }
-Using packer.nvim
-lua
-```
-# Configuration
-
-The plugin comes with sensible defaults, but you can customize it with the following options:
 
 ## Basic Setup
 
@@ -51,6 +45,9 @@ require("gdunit4").setup({
   -- Your configuration options here
 })
 ```
+# Configuration
+
+The plugin comes with sensible defaults, but you can customize it with the following options:
 
 ## Available Options
 
