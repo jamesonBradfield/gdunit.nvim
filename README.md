@@ -24,7 +24,7 @@ A Neovim plugin for integrating GdUnit4 (Godot testing framework) with Neovim. R
 
 ```lua
 {
-  "jamesonBradfield/gdunit4.nvim",
+  "jamesonBradfield/gdunit.nvim",
   dependencies = {
     "nvim-lua/plenary.nvim",
     "nvim-treesitter/nvim-treesitter",
